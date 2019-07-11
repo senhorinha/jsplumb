@@ -15,14 +15,7 @@
    var root = this;
 
     root.jsPlumbUtil.matchesSelector = function(el, selector, ctx) {
-       ctx = ctx || el.parentNode;
-       var possibles = ctx.querySelectorAll(selector);
-       for (var i = 0; i < possibles.length; i++) {
-           if (possibles[i] === el) {
-               return true;
-           }
-       }
-       return false;
+       return true;
    };
 
     root.jsPlumbUtil.consume = function(e, doNotPreventDefault) {
