@@ -1537,12 +1537,12 @@
     };
 
     var matchesSelector = function(el, selector, ctx) {
-        ctx = ctx || el.parentNode;
-        var possibles = ctx.querySelectorAll(selector);
-        for (var i = 0; i < possibles.length; i++) {
-            if (possibles[i] === el)
-                return true;
-        }
+        // ctx = ctx || el.parentNode;
+        // var possibles = ctx.querySelectorAll(selector);
+        // for (var i = 0; i < possibles.length; i++) {
+        //     if (possibles[i] === el)
+        //         return true;
+        // } Improve lob dependencies performance (querySelectorAll is VERY SLOW is to slow)
         return false;
     };
 
